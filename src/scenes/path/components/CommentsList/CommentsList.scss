@@ -1,7 +1,30 @@
+@import "src/styles.scss";
+
 .comments-list {
+  padding-bottom: 20px;
+
   h2{
     margin-bottom: 10px;
   }
+
+  .comment {
+    border: 1px solid $dark-white;
+    padding: 20px;
+
+    .commenter {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 10px;
+
+      .commenter-name {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+      }
+    }
+  }
+
   .comment + .comment {
     margin-top: 20px;
   }

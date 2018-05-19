@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PrimaryButton from 'components/buttons/PrimaryButton/'
+import ProfilePicture from 'components/user/ProfilePicture/'
 import './CommentsList.css'
 
 class CommentsList extends PureComponent {
@@ -23,7 +24,8 @@ class CommentsList extends PureComponent {
   renderComment = comment => (
     <div className="comment" key={comment.id}>
       <div className="commenter">
-        <strong>{comment.name}</strong>
+        <ProfilePicture name={comment.name} />
+        <strong className="commenter-name">{comment.name}</strong>
       </div>
       <span className="comment-text">{comment.content}</span>
     </div>

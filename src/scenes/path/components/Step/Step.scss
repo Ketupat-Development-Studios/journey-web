@@ -9,6 +9,11 @@
   }
 }
 
+.timeline-event>div:first-of-type>div:first-of-type {
+  border-color: $dark !important;
+  background: $background none repeat scroll 0% 0% !important;
+}
+
 .timeline-event:hover {
   background-color: darken($background, 5%);
 }

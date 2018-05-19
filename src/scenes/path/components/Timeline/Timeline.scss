@@ -1,3 +1,24 @@
-.timeline section>div:first-of-type {
-  margin-left: 20px;
+@import "src/styles.scss";
+
+.timeline {
+  margin-bottom: 30px;
+  section>div:first-of-type {
+    margin-left: 20px;
+  }
+  .primary-button.new-step {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $dark;
+
+    span {
+      font-size: $big;
+      font-weight: 700;
+    }
+  }
+  .primary-button.new-step:hover {
+    background-color: lighten($dark, 10%);
+  }
 }

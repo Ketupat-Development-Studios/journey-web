@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Timeline as EventTimeline } from 'react-event-timeline'
+import PrimaryButton from 'components/buttons/PrimaryButton/'
 import Step from '../Step/'
 
 import './Timeline.css'
@@ -62,6 +63,9 @@ class Timeline extends PureComponent {
             events.map(this.renderTimelineEvent)
           }
         </EventTimeline>
+        <PrimaryButton className="new-step">
+          <span>Add a new step</span>
+        </PrimaryButton>
       </div>
     )
   }

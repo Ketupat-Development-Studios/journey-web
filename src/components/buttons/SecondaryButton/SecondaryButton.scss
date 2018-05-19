@@ -1,0 +1,21 @@
+@import "src/styles.scss";
+
+.secondary-button {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid $dark;
+  cursor: pointer;
+
+  span {
+    color: $dark;
+  }
+}
+
+.secondary-button:hover {
+  background-color: $dark;
+
+  span {
+    color: #fff;
+  }
+}
