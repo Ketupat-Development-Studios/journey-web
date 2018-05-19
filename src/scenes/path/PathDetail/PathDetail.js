@@ -12,7 +12,8 @@ class PathDetail extends Component {
     super()
     this.state = {
       isLoading: true,
-      path: {}
+      path: {},
+      steps: []
     }
   }
   componentDidMount () {
@@ -24,8 +25,8 @@ class PathDetail extends Component {
       return (<span>Loading...</span>)
     }
 
-    const { title, summary, tags, steps } = path
-    const pathInfo = { title, summary, tags }
+    const { id, title, summary, tags, steps } = path
+    const pathInfo = { id, title, summary, tags }
 
     return (
       <div className="scene-path-detail">
@@ -40,6 +41,7 @@ class PathDetail extends Component {
           />
         </div>
         <Timeline
+          pathId={path.id}
           steps={steps}
         />
       </div>

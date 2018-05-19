@@ -5,9 +5,9 @@ import './PrimaryButton.css'
 
 class PrimaryButton extends PureComponent {
   render () {
-    const { children, className } = this.props
+    const { children, className, onClick } = this.props
     return (
-      <div className={classnames('primary-button', className)}>
+      <div className={classnames('primary-button', className)} onClick={onClick}>
         {children}
       </div>
     )

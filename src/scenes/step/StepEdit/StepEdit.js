@@ -1,6 +1,10 @@
 import React, { PureComponent } from 'react'
 import ReactMde from 'react-mde'
 import * as Showdown from 'showdown'
+import moment from 'moment'
+
+import ApiManager from 'utils/ApiManager'
+
 import PrimaryButton from 'components/buttons/PrimaryButton/'
 
 import 'react-mde/lib/styles/css/react-mde-all.css'
@@ -10,7 +14,7 @@ class StepEdit extends PureComponent {
   constructor () {
     super()
     this.state = {
-      path: null
+      mde: null
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true})
   }
@@ -23,30 +27,45 @@ class StepEdit extends PureComponent {
     }
   }
   render () {
-    const { path } = this.state
+    const { mde } = this.state
     return (
       <div className="scene-path-edit">
         <ReactMde
+          className="path-editor"
           layout="horizontal"
           onChange={this.onEdit}
-          editorState={path}
+          editorState={mde}
           generateMarkdownPreview={(markdown) => Promise.resolve(this.converter.makeHtml(markdown))}
         />
-        <PrimaryButton onClick={this.savePath}>
+        <PrimaryButton className="save-step" onClick={this.savePath}>
           <span>SAVE</span>
         </PrimaryButton>
       </div>
     )
   }
-  onEdit = (path) => {
-    this.setState({ path })
+  onEdit = (mde) => {
+    this.setState({ mde })
   }
-  savePath = () => {
-    const { match: { params: { stepId } } } = this.props
+  savePath = async () => {
+    const { match: { params: { stepId, pathId } } } = this.props
+    const { mde } = this.state
     if (stepId) {
-      // create
-    } else {
       // update
+    } else {
+      // create
+      const stepData = {
+        title: 'Wow new step',
+        content: mde.markdown,
+        date: moment().format('Do MMM'),
+        comments: [],
+        pathId: Number.parseInt(pathId, 10)
+      }
+      try {
+        await ApiManager.createStep(stepData)
+      } catch (error) {
+        console.error(error)
+      }
+      window.location.href = `/path/${pathId}`
     }
   }
 }

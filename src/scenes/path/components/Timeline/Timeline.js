@@ -21,7 +21,7 @@ class Timeline extends PureComponent {
             steps.map(this.renderTimelineEvent)
           }
         </EventTimeline>
-        <PrimaryButton className="new-step">
+        <PrimaryButton className="new-step" onClick={this.newStep}>
           <span>Add a new step</span>
         </PrimaryButton>
       </div>
@@ -31,6 +31,7 @@ class Timeline extends PureComponent {
     const { activeEvent } = this.state
     return (
       <Step
+        key={event.id}
         id={index}
         step={event}
         activeEvent={activeEvent}
@@ -45,6 +46,10 @@ class Timeline extends PureComponent {
     } else {
       this.setState({ activeEvent: index })
     }
+  }
+  newStep = () => {
+    const { pathId } = this.props
+    window.location.href = `/path/${pathId}/step/new`
   }
 }
 

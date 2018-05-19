@@ -31,7 +31,6 @@ class Step extends PureComponent {
   }
   toggleTimelineEvent = (event) => {
     const { id, toggleEvent } = this.props
-    console.log(event)
     toggleEvent(id)
   }
   stopPropogation = event => {

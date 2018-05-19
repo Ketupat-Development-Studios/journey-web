@@ -19,7 +19,7 @@ class ApiManager {
   static getPathById = pathId => new Promise(async (resolve, reject) => {
     let result
     try {
-      result = await request.get(`/paths/${pathId}`)
+      result = await request.get(`/paths/${pathId}?_embed=steps`)
     } catch (error) {
       reject(error)
     }
@@ -34,10 +34,10 @@ class ApiManager {
     }
     resolve(result.data)
   })
-  static createStep = step => new Promise(async (resolve, reject) => {
+  static createStep = (step) => new Promise(async (resolve, reject) => {
     let result
     try {
-      result = await request.post(`/steps/${step.id}`)
+      result = await request.post(`/steps`, step)
     } catch (error) {
       reject(error)
     }
