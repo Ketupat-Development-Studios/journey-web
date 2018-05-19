@@ -4,14 +4,15 @@
   display: inline-flex;
   flex-direction: row;
   padding: 5px 10px 5px 10px;
-  background-color: $blue;
+  background-color: $dark;
   cursor: pointer;
 
   span {
     color: white;
+    font-weight: 700;
   }
 }
 
 .primary-button:hover {
-  background-color: darken($blue, 10%);
+  background-color: lighten($dark, 20%);
 }

@@ -5,7 +5,8 @@ import {
   Link
 } from 'react-router-dom'
 
-import PathDetail from './scenes/path/PathDetail'
+import PathDetail from './scenes/path/PathDetail/'
+import StepEdit from './scenes/step/StepEdit/'
 import ProfileDetail from './scenes/profile/ProfileDetail'
 import Explore from './scenes/explore/Explore'
 
@@ -18,9 +19,10 @@ const AppRouter = () => (
 
       <hr/>
 
-      <Route exact path="/" component={Explore}/>
-      <Route path="/profile/:id" component={ProfileDetail}/>
-      <Route path="/path/:id" component={PathDetail}/>
+      <Route exact path="/" component={Explore} />
+      <Route path="/profile/:id" component={ProfileDetail} />
+      <Route path="/path/:pathId" component={PathDetail} />
+      <Route path="/path/:pathId/step/new" component={StepEdit} />
     </div>
   </Router>
 )

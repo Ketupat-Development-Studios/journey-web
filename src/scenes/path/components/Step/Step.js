@@ -6,24 +6,23 @@ import CommentsList from '../CommentsList/'
 import './Step.css'
 
 class Step extends PureComponent {
-  render(){
+  render () {
     const { id, activeEvent, step } = this.props
     return (
       <div className="timeline-event" onClick={this.toggleTimelineEvent}>
         <TimelineEvent
           title={step.title}
-          createdAt={step.createdAt}
+          createdAt={step.date}
           icon={(
             <Ionicon name="ios-star" />
           )}
         >
           {
             activeEvent === id
-              ?
-                <div className="timeline-event-content" onClick={this.stopPropogation}>
-                  {step.content}
-                  <CommentsList comments={step.comments} />
-                </div>
+              ? <div className="timeline-event-content" onClick={this.stopPropogation}>
+                {step.content}
+                <CommentsList comments={step.comments} />
+              </div>
               : null
           }
         </TimelineEvent>

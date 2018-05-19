@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import './SecondaryButton.css'
 
 class SecondaryButton extends PureComponent {
-  render(){
+  render () {
     const { children, className } = this.props
     return (
       <div className={classnames('secondary-button', className)}>

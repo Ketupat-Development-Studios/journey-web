@@ -6,7 +6,7 @@ import LikeButton from '../LikeButton/'
 import './PathInfo.css'
 
 class PathInfo extends PureComponent {
-  constructor(){
+  constructor () {
     super()
     this.state = {
       path: {
@@ -16,9 +16,8 @@ class PathInfo extends PureComponent {
       }
     }
   }
-  render(){
-    const { path } = this.state
-    const { className } = this.props
+  render () {
+    const { className, path } = this.props
     return (
       <div className={classnames('path-info', className)}>
         <h1 className="path-title">{path.title}</h1>

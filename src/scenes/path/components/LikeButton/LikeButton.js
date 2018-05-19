@@ -5,13 +5,13 @@ import classnames from 'classnames'
 import './LikeButton.css'
 
 class LikeButton extends PureComponent {
-  constructor(){
+  constructor () {
     super()
     this.state = {
       isLiked: false
     }
   }
-  render(){
+  render () {
     const { className } = this.props
     const { isLiked } = this.state
     return (
@@ -23,7 +23,11 @@ class LikeButton extends PureComponent {
         )}
         onClick={this.toggleLike}
       >
-        <Ionicon icon="md-heart" color={classnames(isLiked ? '#fff' : '#000')} />
+        <Ionicon
+          icon={isLiked ? 'ios-heart' : 'ios-heart-outline'}
+          color={classnames(isLiked ? '#fff' : '#000')}
+          fontSize="2em"
+        />
       </div>
     )
   }

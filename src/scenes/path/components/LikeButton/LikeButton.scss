@@ -9,19 +9,17 @@
   width: $size;
   height: $size;
   border-radius: $size / 2;
-  border: 1px solid $dark;
   cursor: pointer;
 }
 
 .like-button:hover {
-  border: 1px solid $red;
-
   svg {
     fill: $red;
   }
 }
 
 .like-button.liked {
-  background-color: $red;
-  border: 1px solid $red;
+  svg {
+    fill: $red;
+  }
 }

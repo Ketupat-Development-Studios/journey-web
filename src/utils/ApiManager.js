@@ -7,6 +7,42 @@ const request = axios.create({
 })
 
 class ApiManager {
+  static getPaths = () => new Promise(async (resolve, reject) => {
+    let result
+    try {
+      result = await request.get('/paths')
+    } catch (error) {
+      reject(error)
+    }
+    resolve(result.data)
+  })
+  static getPathById = pathId => new Promise(async (resolve, reject) => {
+    let result
+    try {
+      result = await request.get(`/paths/${pathId}`)
+    } catch (error) {
+      reject(error)
+    }
+    resolve(result.data)
+  })
+  static updateStep = step => new Promise(async (resolve, reject) => {
+    let result
+    try {
+      result = await request.patch(`/steps/${step.id}`)
+    } catch (error) {
+      reject(error)
+    }
+    resolve(result.data)
+  })
+  static createStep = step => new Promise(async (resolve, reject) => {
+    let result
+    try {
+      result = await request.post(`/steps/${step.id}`)
+    } catch (error) {
+      reject(error)
+    }
+    resolve(result.data)
+  })
   static getStepById = stepId => new Promise(async (resolve, reject) => {
     let result
     try {
