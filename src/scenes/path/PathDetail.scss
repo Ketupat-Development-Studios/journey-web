@@ -1,0 +1,17 @@
+.scene-path-detail {
+  .path-summary {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-content: center;
+    align-items: center;
+
+    .profile {
+      padding: 20px;
+    }
+    
+    .path-info {
+      padding: 20px;
+    }
+  }
+}

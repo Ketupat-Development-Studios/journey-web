@@ -1,0 +1,15 @@
+@import "src/styles.scss";
+
+.tag {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.tag + .tag {
+  margin-left: 10px;
+}
+
+.tag:hover {
+  background-color: darken($background, 5%);
+}

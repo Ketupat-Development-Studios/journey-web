@@ -1,0 +1,12 @@
+.comments-list {
+  h2{
+    margin-bottom: 10px;
+  }
+  .comment + .comment {
+    margin-top: 20px;
+  }
+
+  .new-comment {
+    margin-top: 20px;
+  }
+}

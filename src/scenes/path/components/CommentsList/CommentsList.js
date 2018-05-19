@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import PrimaryButton from 'components/buttons/PrimaryButton/'
+import './CommentsList.css'
 
 class CommentsList extends PureComponent {
   render(){
@@ -12,13 +14,16 @@ class CommentsList extends PureComponent {
         {
           comments.map(this.renderComment)
         }
+        <PrimaryButton className="new-comment">
+          <span>Write a response</span>
+        </PrimaryButton>
       </div>
     )
   }
   renderComment = comment => (
     <div className="comment" key={comment.id}>
       <div className="commenter">
-        <span>{comment.name}</span>
+        <strong>{comment.name}</strong>
       </div>
       <span className="comment-text">{comment.content}</span>
     </div>

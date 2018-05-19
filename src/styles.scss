@@ -1,0 +1,26 @@
+$light-red: #e74c3c;
+$red: #c0392b;
+
+$light-blue: #3498db;
+$blue: #2980b9;
+
+$light-yellow: #f1c40f;
+$yellow: #f39c12;
+
+$white: #ecf0f1; 
+$dark-white: #bdc3c7;
+
+$background: #ffeed9;
+$dark: #3C2520;
+
+* {
+  color: $dark;
+}
+
+body {
+  background-color: $background;
+  #root {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,14 @@
+@import "src/styles.scss";
+
+.timeline-event {
+  cursor: pointer;
+  padding: 20px;
+  .timeline-event-content {
+    font-size: 100%;
+    font-weight: normal;
+  }
+}
+
+.timeline-event:hover {
+  background-color: darken($background, 5%);
+}

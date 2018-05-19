@@ -1,0 +1,16 @@
+.path-info {
+  .bottom {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+
+    .tags {
+      display: flex;
+    }
+
+    .like-button {
+      margin-left: 40px;
+    }
+  }
+}
