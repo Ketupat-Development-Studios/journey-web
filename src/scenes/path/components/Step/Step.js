@@ -131,7 +131,7 @@ class Step extends PureComponent {
     const { step } = this.props
     const curUrl = window.location.href
     const urlParams = {
-      mde: `Forked from [${curUrl}](${curUrl})\n\n${step.content}`,
+      mde: `Forked from [${step.title}](${curUrl})\n\n${step.content}`,
       title: step.title,
       params: JSON.stringify({
         isForked: true
