@@ -13,11 +13,6 @@ import Explore from './scenes/explore/Explore'
 const AppRouter = () => (
   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Explore</Link></li>
-      </ul>
-
-      <hr/>
 
       <Route exact path="/" component={Explore} />
       <Route path="/profile/:id" component={ProfileDetail} />

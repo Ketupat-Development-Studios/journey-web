@@ -8,9 +8,6 @@ import './CommentsSection.css'
 class CommentsList extends PureComponent {
   render () {
     const { comments, onNewCommentEdit, onNewCommentSubmit } = this.props
-    if (!comments || !Array.isArray(comments) || comments.length === 0) {
-      return null
-    }
     return (
       <div className="comments-list">
         <h2>Responses</h2>
@@ -20,7 +17,9 @@ class CommentsList extends PureComponent {
           onSubmit={onNewCommentSubmit}
         />
         {
-          comments.map(this.renderComment)
+          (comments && comments.length > 0)
+            ? comments.map(this.renderComment)
+            : null
         }
       </div>
     )
