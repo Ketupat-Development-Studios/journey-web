@@ -90,11 +90,11 @@ class Step extends PureComponent {
   }
   renderIcon = () => {
     const { step } = this.props
-    const { needHelp, isMerged } = step
+    const { needHelp, isForked } = step
     if (needHelp) {
       return <Ionicon icon="ios-alert" color='#c0392b' />
     }
-    if (isMerged) {
+    if (isForked) {
       return <Ionicon className="fork" icon="ios-git-merge" fontSize="20px" />
     }
     return null
@@ -130,7 +130,13 @@ class Step extends PureComponent {
   onFork = ({ value: pathId }) => {
     const { step } = this.props
     const curUrl = window.location.href
-    const urlParams = { mde: `Forked from [${curUrl}](${curUrl})\n\n${step.content}`, title: step.title }
+    const urlParams = {
+      mde: `Forked from [${curUrl}](${curUrl})\n\n${step.content}`,
+      title: step.title,
+      params: JSON.stringify({
+        isForked: true
+      })
+    }
     window.location.href = `/path/${pathId}/step/new?${qs.stringify(urlParams)}`
   }
 }

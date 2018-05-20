@@ -31,6 +31,9 @@ class StepEdit extends PureComponent {
     if (queryString.title) {
       this.state.title = queryString.title
     }
+    if (queryString.params) {
+      this.state.params = JSON.parse(queryString.params)
+    }
   }
   componentDidMount () {
     const { match: { params: { stepId } } } = this.props
@@ -114,12 +117,14 @@ class StepEdit extends PureComponent {
     } else {
       // create
       const { match: { params: { pathId } } } = this.props
+      const { params } = this.state
       const stepData = {
         title,
         content: mde.markdown,
         date: moment().format('Do MMM'),
         comments: [],
-        pathId: Number.parseInt(pathId, 10)
+        pathId: Number.parseInt(pathId, 10),
+        ...params
       }
       try {
         await ApiManager.createStep(stepData)
