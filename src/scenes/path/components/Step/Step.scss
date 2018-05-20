@@ -12,6 +12,18 @@
       img {
         width: 50%;
       }
+      table {
+        thead, tbody {
+          tr {
+            td + td {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+      blockquote {
+        font-style: italic;
+      }
     }
   }
 }

@@ -17,11 +17,17 @@ class Timeline extends PureComponent {
     const { steps } = this.props
     return (
       <div className="timeline">
-        <EventTimeline style={{fontSize: '100%', width: '100%'}}>
-          {
-            steps.map(this.renderTimelineEvent)
-          }
-        </EventTimeline>
+        {
+          steps.length === 0
+            ? null
+            : (
+              <EventTimeline style={{fontSize: '100%', width: '100%'}}>
+                {
+                  steps.map(this.renderTimelineEvent)
+                }
+              </EventTimeline>
+            )
+        }
         <PrimaryButton className="new-step" onClick={this.newStep}>
           <span>Add a new step</span>
         </PrimaryButton>
