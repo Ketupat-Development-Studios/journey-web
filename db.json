@@ -80,7 +80,8 @@
       "date": "20th May",
       "comments": [],
       "pathId": 1,
-      "id": 1
+      "id": 1,
+      "needHelp": true
     },
     {
       "title": "Sprint Planning",
@@ -88,11 +89,12 @@
       "date": "20th May",
       "comments": [],
       "pathId": 1,
-      "id": 2
+      "id": 2,
+      "isMerged": true
     },
     {
       "title": "Quick Halftime Retrospective",
-      "content": "Usually the retrospective is only conducted after the entire sprint. But since this was our first sprint, we stumbled (and learnt!) a lot within the first week.\n\nWe held a quick 30 minutes _retro_ (fancy abbreviation for retrospective) on Friday, chaired by Scrum Master Justin.\n\n![retro](https://cdn-images-1.medium.com/max/1000/1*WlpszurME9pgIj_bjker-w.jpeg)",
+      "content": "Usually the retrospective is only conducted after the entire sprint. But since this was our first sprint, we stumbled (and learnt!) a lot within the first week.\n\nWe held a quick 30 minutes _retro_ (fancy abbreviation for retrospective) on Friday, chaired by Scrum Master Justin.\n\n```\nfor x in range y\n```\n\n![retro](https://cdn-images-1.medium.com/max/1000/1*WlpszurME9pgIj_bjker-w.jpeg)",
       "date": "20th May",
       "comments": [],
       "pathId": 1,

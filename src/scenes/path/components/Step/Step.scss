@@ -3,6 +3,34 @@
 .timeline-event {
   cursor: pointer;
   padding: 20px;
+
+  svg.fork{
+    transform: rotate(180deg);
+    margin-right: 5px;
+  }
+
+  .fork-button {
+    margin-left: 20px;
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+  .fork-button:hover{
+    svg{
+      fill: #ffffff;
+    }
+  }
+
+  .event-title {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    .fork {
+      padding-left: 30px;
+    }
+  }
+
   .timeline-event-content {
     font-size: 100%;
     font-weight: normal;

@@ -16,8 +16,9 @@ class StepEdit extends PureComponent {
     super()
     this.state = {
       title: '',
-      mde: null,
-      isLoading: false
+      mde: { markdown: '' },
+      isLoading: false,
+      step: {}
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true})
   }
@@ -49,9 +50,14 @@ class StepEdit extends PureComponent {
           editorState={mde}
           generateMarkdownPreview={(markdown) => Promise.resolve(this.converter.makeHtml(markdown))}
         />
-        <PrimaryButton className="save-step" onClick={this.savePath}>
-          <span>SAVE</span>
-        </PrimaryButton>
+        <div className="action-bar">
+          <PrimaryButton className="save-step" onClick={this.savePath}>
+            <span>SAVE</span>
+          </PrimaryButton>
+          <PrimaryButton className="help" onClick={this.sosPath}>
+            <span>I NEED HELP</span>
+          </PrimaryButton>
+        </div>
       </div>
     )
   }
@@ -73,6 +79,7 @@ class StepEdit extends PureComponent {
       mde: {
         markdown: step.content
       },
+      step,
       pathId: step.pathId,
       isLoading: false
     })
@@ -111,6 +118,20 @@ class StepEdit extends PureComponent {
       }
       window.location.href = `/path/${pathId}`
     }
+  }
+  sosPath = async () => {
+    const { match: { params: { stepId } } } = this.props
+    const { pathId, step } = this.state
+    try {
+      const stepData = {
+        id: stepId,
+        needHelp: !step.needHelp
+      }
+      await ApiManager.updateStep(stepData)
+    } catch (error) {
+      console.error(error)
+    }
+    window.location.href = `/path/${pathId}`
   }
 }
 
