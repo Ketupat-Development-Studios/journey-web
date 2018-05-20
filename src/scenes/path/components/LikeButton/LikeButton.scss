@@ -1,0 +1,25 @@
+@import "src/styles.scss";
+
+.like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  $size: 30px;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  cursor: pointer;
+}
+
+.like-button:hover {
+  svg {
+    fill: $red;
+  }
+}
+
+.like-button.liked {
+  svg {
+    fill: $red;
+  }
+}

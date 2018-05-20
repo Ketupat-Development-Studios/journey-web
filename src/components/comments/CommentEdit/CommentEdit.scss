@@ -1,0 +1,12 @@
+@import "src/styles.scss";
+
+.comment-edit {
+  border: 1px solid $dark-white;
+  padding: 10px 20px 10px 20px;
+  .comment-text-field {
+    padding-top: 10px;
+  }
+  .new-comment {
+    margin-bottom: 0;
+  }
+}

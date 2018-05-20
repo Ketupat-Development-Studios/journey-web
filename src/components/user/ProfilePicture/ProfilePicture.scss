@@ -1,0 +1,7 @@
+.profile-picture {
+  $size: 25px;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  border: 1px solid #000;
+}

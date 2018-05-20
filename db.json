@@ -1,0 +1,60 @@
+{
+  "paths": [
+    {
+      "id": 1,
+      "title": "My Adventures in Scrum",
+      "summary": "We tried scrum. Here's how it worked for us.",
+      "tags": [
+        "Agile",
+        "Scrum",
+        "Management"
+      ],
+      "author": {
+        "name": "Dallas Kwok",
+        "profile_picture": "https://tinyfac.es/data/avatars/7E570445-25F0-4276-8E8F-084ABA2C8FB8-200w.jpeg"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Serverless Deployment",
+      "summary": "Getting ready for FAAS - the future of software deployment",
+      "tags": [
+        "DevOps",
+        "Deployment",
+        "SysAdmin",
+        "Lambda"
+      ],
+      "author": {
+        "name": "Destin Poole",
+        "profile_picture": "https://d3iw72m71ie81c.cloudfront.net/3fa3b0c2-df93-4962-a3d9-7cad201135b3-jpg"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "title": "Assigning Roles",
+      "content": "The practice of Scrum benefits from clearly defined roles. Regardless of what your title might be in an organization, in Scrum it all boils down to the **Scrum Master**, **Product Owner**, and **Development Team** members. Members of the team can try on different hats, but should only wear one hat at a time.\n\nJustin's always wanted a fancy title like **Scrum Master** whilst I live and breath product so I became **Product Owner**.\n\n| roles            | members                  |\n|------------------|--------------------------|\n| Scrum Master     | Justin                   |\n| Product Owner    | Dallas                   |\n| Development Team | Stacy,  Charles &  Bruno |\n\nThe Product Owner writes user stories, communicates with stakeholders to understand business needs, and maintains the product backlog in order of priority. The Scrum Master organizes Scrum events and identifies and removes impediments to the sprint. The Development Team members commit to and deliver on the sprint backlog. Everyone has a role, and each is integral to a successful Scrum team.",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 1,
+      "id": 1
+    },
+    {
+      "title": "Sprint Planning",
+      "content": "Sprint planning is perhaps the most important element of Scrum, and one that makes Scrum stand out among agile methodologies. This is because the team commits to the work to be done in a sprint. \n\n![board](http://www.agilebuddha.com/wp-content/uploads/2015/03/card-wall.png)\n\nIn exchange, the Product Owner agrees not to change the scope of the work expected of the team during the sprint. \n\n> Let's commit to adding feature A within this 2 weeks and fix bugs X, Y and Z at the same time. Everything else can wait.\n\n\nWhen the team makes this “deal”, it empowers the team to take ownership over the sprint and its success. A Scrum team should be committed to the success of the sprint, willing to do whatever it can to carry it out effectively.",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 1,
+      "id": 2
+    },
+    {
+      "title": "Quick Halftime Retrospective",
+      "content": "Usually the retrospective is only conducted after the entire sprint. But since this was our first sprint, we stumbled (and learnt!) a lot within the first week.\n\nWe held a quick 30 minutes _retro_ (fancy abbreviation for retrospective) on Friday, chaired by Scrum Master Justin.\n\n![retro](https://cdn-images-1.medium.com/max/1000/1*WlpszurME9pgIj_bjker-w.jpeg)",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 1,
+      "id": 3
+    }
+  ],
+  "comments": []
+}

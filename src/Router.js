@@ -1,28 +1,30 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
-import PathDetail from './scenes/path/PathDetail'
+import PathDetail from './scenes/path/PathDetail/'
+import StepEdit from './scenes/step/StepEdit/'
 import ProfileDetail from './scenes/profile/ProfileDetail'
-import StepDetail from './scenes/step/StepDetail'
 import Explore from './scenes/explore/Explore'
+
+// HERE IS YOUR SAMPLE PATH
+import Sample from './scenes/sample/Sample'
 
 const AppRouter = () => (
   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Explore</Link></li>
-      </ul>
+      <div className="navbar">
+        <img src="" />
+      </div>
+      <Route exact path="/" component={Explore} />
+      <Route path="/profile/:id" component={ProfileDetail} />
+      <Route exact path="/path/:pathId" component={PathDetail} />
+      <Route path="/path/:pathId/step/new" component={StepEdit} />
+      <Route path="/step/:stepId/edit" component={StepEdit} />
 
-      <hr/>
-
-      <Route exact path="/" component={Explore}/>
-      <Route path="/profile/:id" component={ProfileDetail}/>
-      <Route path="/step/:id" component={StepDetail} />
-      <Route path="/path/:id" component={PathDetail}/>
+      <Route path="/sample" component={Sample} />
     </div>
   </Router>
 )

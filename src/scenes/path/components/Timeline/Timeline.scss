@@ -1,0 +1,20 @@
+@import "src/styles.scss";
+
+.timeline {
+  margin-bottom: 30px;
+  section>div:first-of-type {
+    margin-left: 20px;
+    background-color: $dark !important;
+  }
+  .primary-button.new-step {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    span {
+      font-size: $big;
+    }
+  }
+}
