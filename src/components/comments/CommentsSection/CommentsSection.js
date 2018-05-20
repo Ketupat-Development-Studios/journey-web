@@ -1,23 +1,25 @@
 import React, { PureComponent } from 'react'
-import PrimaryButton from 'components/buttons/PrimaryButton/'
 import ProfilePicture from 'components/user/ProfilePicture/'
-import './CommentsList.css'
+import CommentEdit from 'components/comments/CommentEdit/'
+import './CommentsSection.css'
 
 class CommentsList extends PureComponent {
-  render(){
-    const { comments } = this.props
-    if(!comments || !Array.isArray(comments) || comments.length === 0){
+  render () {
+    const { comments, onNewCommentEdit, onNewCommentSubmit } = this.props
+    if (!comments || !Array.isArray(comments) || comments.length === 0) {
       return null
     }
     return (
       <div className="comments-list">
         <h2>Responses</h2>
+        <CommentEdit
+          className="new-comment"
+          onCommentEdit={onNewCommentEdit}
+          onSubmit={onNewCommentSubmit}
+        />
         {
           comments.map(this.renderComment)
         }
-        <PrimaryButton className="new-comment">
-          <span>Write a response</span>
-        </PrimaryButton>
       </div>
     )
   }

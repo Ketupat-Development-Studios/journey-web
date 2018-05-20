@@ -6,6 +6,7 @@ import moment from 'moment'
 import ApiManager from 'utils/ApiManager'
 
 import PrimaryButton from 'components/buttons/PrimaryButton/'
+import TextField from 'components/fields/TextField'
 
 import 'react-mde/lib/styles/css/react-mde-all.css'
 import './StepEdit.css'
@@ -14,6 +15,7 @@ class StepEdit extends PureComponent {
   constructor () {
     super()
     this.state = {
+      title: '',
       mde: null
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true})
@@ -30,6 +32,11 @@ class StepEdit extends PureComponent {
     const { mde } = this.state
     return (
       <div className="scene-path-edit">
+        <TextField
+          className="title-input"
+          placeholder="Title"
+          onTextChange={this.onTitleChange}
+        />
         <ReactMde
           className="path-editor"
           layout="horizontal"
@@ -46,15 +53,16 @@ class StepEdit extends PureComponent {
   onEdit = (mde) => {
     this.setState({ mde })
   }
+  onTitleChange = title => this.setState({ title })
   savePath = async () => {
     const { match: { params: { stepId, pathId } } } = this.props
-    const { mde } = this.state
+    const { title, mde } = this.state
     if (stepId) {
       // update
     } else {
       // create
       const stepData = {
-        title: 'Wow new step',
+        title,
         content: mde.markdown,
         date: moment().format('Do MMM'),
         comments: [],

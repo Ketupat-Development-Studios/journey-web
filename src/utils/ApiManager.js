@@ -7,6 +7,15 @@ const request = axios.create({
 })
 
 class ApiManager {
+  static getCommentsByPath = pathId => new Promise(async (resolve, reject) => {
+    let result
+    try {
+      result = await request.get(`/comments?pathId=${pathId}`)
+    } catch (error) {
+      console.error(error)
+    }
+    resolve(result.data)
+  })
   static getPaths = () => new Promise(async (resolve, reject) => {
     let result
     try {
@@ -19,7 +28,7 @@ class ApiManager {
   static getPathById = pathId => new Promise(async (resolve, reject) => {
     let result
     try {
-      result = await request.get(`/paths/${pathId}?_embed=steps`)
+      result = await request.get(`/paths/${pathId}?_embed=steps&_embed=comments`)
     } catch (error) {
       reject(error)
     }
@@ -38,6 +47,15 @@ class ApiManager {
     let result
     try {
       result = await request.post(`/steps`, step)
+    } catch (error) {
+      reject(error)
+    }
+    resolve(result.data)
+  })
+  static createComment = comment => new Promise(async (resolve, reject) => {
+    let result
+    try {
+      result = await request.post('/comments', comment)
     } catch (error) {
       reject(error)
     }

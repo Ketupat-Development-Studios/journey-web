@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactMarkdown from 'react-markdown'
 import ApiManager from 'utils/ApiManager'
-import CommentsList from './components/CommentsList'
+import CommentsList from 'components/CommentsList'
 
 class StepDetail extends Component {
   constructor () {
