@@ -25,6 +25,7 @@ const AppRouter = () => (
       <Route path="/step/:stepId/edit" component={StepEdit} />
 
       <Route path="/sample" component={Sample} />
+      <Route path="/results/:searchTerms" component={results} />
     </div>
   </Router>
 )
