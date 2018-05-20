@@ -36,8 +36,8 @@ class Step extends PureComponent {
               ? (
                 <div
                   className="timeline-event-content"
-                  onClick={this.stopPropogation}
                   onDoubleClick={this.editStep}
+                  onClick={this.stopPropogation}
                 >
                   <ReactMarkdown
                     className="step-description"
@@ -69,7 +69,7 @@ class Step extends PureComponent {
     } catch (error) {
       console.error(error)
     }
-    this.setState({ comments, commentsLoading: false })
+    this.setState({ comments: comments.reverse(), commentsLoading: false })
   }
   onNewCommentEdit = newComment => this.setState({ newComment })
   onNewCommentSubmit = async () => {
@@ -82,6 +82,8 @@ class Step extends PureComponent {
     }
     try {
       await ApiManager.createComment(commentData)
+      this.setState({ newComment: '' })
+      await this.fetchComments()
     } catch (error) {
       console.error(error)
     }

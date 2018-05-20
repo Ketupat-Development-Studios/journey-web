@@ -8,7 +8,7 @@ const suffix = '_profile_picture'
 class ProfilePicture extends PureComponent {
   componentDidMount () {
     const { name } = this.props
-    const initials = name.split(' ').map(s => s[0].toUpperCase()).join('')
+    const initials = name.split(' ').map(s => s[0].toUpperCase()).slice(0, 2).join('')
 
     // eslint-disable-next-line
     const avatar = new Avatar(document.getElementById(name + suffix), {

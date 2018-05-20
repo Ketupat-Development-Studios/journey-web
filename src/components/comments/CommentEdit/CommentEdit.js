@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import classnames from 'classnames'
 import MultilineTextField from 'components/fields/MultilineTextField'
-import PrimaryButton from 'components/buttons/PrimaryButton/'
 
 import './CommentEdit.css'
 
@@ -13,8 +12,7 @@ class CommentEdit extends PureComponent {
     }
   }
   render () {
-    const { value, onCommentEdit, className, onSubmit } = this.props
-    const { isFocused } = this.state
+    const { value, onCommentEdit, className } = this.props
     return (
       <div className={classnames('comment-edit', className)}>
         <MultilineTextField
@@ -25,21 +23,23 @@ class CommentEdit extends PureComponent {
           textareaProps={{
             rows: 1,
             onFocus: this.onFocus,
-            onBlur: this.onBlur
+            onBlur: this.onBlur,
+            onKeyDown: this.onKeyDown
           }}
         />
-        {
-          isFocused
-            ? <PrimaryButton className="new-comment" onSubmit={onSubmit}>
-              <span>Post</span>
-            </PrimaryButton>
-            : null
-        }
       </div>
     )
   }
   onFocus = () => this.setState({ isFocused: true })
   onBlur = () => this.setState({ isFocused: false })
+  onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      const { onSubmit } = this.props
+      event.preventDefault()
+      event.stopPropagation()
+      onSubmit()
+    }
+  }
 }
 
 export default CommentEdit

@@ -17,10 +17,11 @@ $large: 1.5em;
 $big: 1.2em;
 $normal: 1em;
 
-$font-family: 'Open Sans';
+$font-family: 'Helvetica, "Open Sans"';
 
 * {
   color: $dark;
+  font-family: $font-family;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   #root {
     max-width: 960px;
     margin: 0 auto;
+    font-family: $font-family;
   }
 }
 

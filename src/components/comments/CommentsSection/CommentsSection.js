@@ -7,7 +7,7 @@ import './CommentsSection.css'
 
 class CommentsList extends PureComponent {
   render () {
-    const { comments, onNewCommentEdit, onNewCommentSubmit } = this.props
+    const { comments, onNewCommentEdit, onNewCommentSubmit, newComment } = this.props
     return (
       <div className="comments-list">
         <h2>Responses</h2>
@@ -15,6 +15,7 @@ class CommentsList extends PureComponent {
           className="new-comment"
           onCommentEdit={onNewCommentEdit}
           onSubmit={onNewCommentSubmit}
+          value={newComment}
         />
         {
           (comments && comments.length > 0)
