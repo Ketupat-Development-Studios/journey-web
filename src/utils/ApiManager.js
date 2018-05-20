@@ -7,10 +7,10 @@ const request = axios.create({
 })
 
 class ApiManager {
-  static getCommentsByPath = pathId => new Promise(async (resolve, reject) => {
+  static getCommentsByStep = stepId => new Promise(async (resolve, reject) => {
     let result
     try {
-      result = await request.get(`/comments?pathId=${pathId}`)
+      result = await request.get(`/comments?stepId=${stepId}`)
     } catch (error) {
       console.error(error)
     }
@@ -37,7 +37,7 @@ class ApiManager {
   static updateStep = step => new Promise(async (resolve, reject) => {
     let result
     try {
-      result = await request.patch(`/steps/${step.id}`)
+      result = await request.patch(`/steps/${step.id}`, step)
     } catch (error) {
       reject(error)
     }

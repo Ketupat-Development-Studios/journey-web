@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
+import ReactMarkdown from 'react-markdown'
 import ProfilePicture from 'components/user/ProfilePicture/'
 import CommentEdit from 'components/comments/CommentEdit/'
+
 import './CommentsSection.css'
 
 class CommentsList extends PureComponent {
@@ -29,7 +31,10 @@ class CommentsList extends PureComponent {
         <ProfilePicture name={comment.name} />
         <strong className="commenter-name">{comment.name}</strong>
       </div>
-      <span className="comment-text">{comment.content}</span>
+      <ReactMarkdown
+        className="comment-description"
+        source={comment.content}
+      />
     </div>
   )
 }

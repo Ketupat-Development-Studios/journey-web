@@ -23,6 +23,7 @@ const AppRouter = () => (
       <Route path="/profile/:id" component={ProfileDetail} />
       <Route exact path="/path/:pathId" component={PathDetail} />
       <Route path="/path/:pathId/step/new" component={StepEdit} />
+      <Route path="/step/:stepId/edit" component={StepEdit} />
     </div>
   </Router>
 )

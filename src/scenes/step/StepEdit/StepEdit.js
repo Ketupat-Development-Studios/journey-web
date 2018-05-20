@@ -16,26 +16,31 @@ class StepEdit extends PureComponent {
     super()
     this.state = {
       title: '',
-      mde: null
+      mde: null,
+      isLoading: false
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true})
   }
   componentDidMount () {
     const { match: { params: { stepId } } } = this.props
     if (stepId) {
-      // populate editor
+      this.fetchStep()
     } else {
       // do nothing
     }
   }
   render () {
-    const { mde } = this.state
+    const { mde, title, isLoading } = this.state
+    if (isLoading) {
+      return <span>Loading...</span>
+    }
     return (
       <div className="scene-path-edit">
         <TextField
           className="title-input"
           placeholder="Title"
           onTextChange={this.onTitleChange}
+          value={title}
         />
         <ReactMde
           className="path-editor"
@@ -54,13 +59,44 @@ class StepEdit extends PureComponent {
     this.setState({ mde })
   }
   onTitleChange = title => this.setState({ title })
+  fetchStep = async () => {
+    this.setState({ isLoading: true })
+    const { match: { params: { stepId } } } = this.props
+    let step
+    try {
+      step = await ApiManager.getStepById(stepId)
+    } catch (error) {
+      console.error(error)
+    }
+    this.setState({
+      title: step.title,
+      mde: {
+        markdown: step.content
+      },
+      pathId: step.pathId,
+      isLoading: false
+    })
+  }
   savePath = async () => {
-    const { match: { params: { stepId, pathId } } } = this.props
+    const { match: { params: { stepId } } } = this.props
     const { title, mde } = this.state
     if (stepId) {
       // update
+      const { pathId } = this.state
+      const stepData = {
+        id: stepId,
+        title,
+        content: mde.markdown
+      }
+      try {
+        await ApiManager.updateStep(stepData)
+      } catch (error) {
+        console.error(error)
+      }
+      window.location.href = `/path/${pathId}`
     } else {
       // create
+      const { match: { params: { pathId } } } = this.props
       const stepData = {
         title,
         content: mde.markdown,
