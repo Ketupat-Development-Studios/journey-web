@@ -20,7 +20,10 @@
 
 .card-container {
   background-color: #fffcf2;
-  padding: 1.5em 2em; }
+  padding: 1.5em 2em;
+  a {
+    text-decoration: none; }
+}
 
 .card-container:hover {
   background-color: #fff6d9; }
@@ -38,9 +41,6 @@
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   overflow: hidden; }
-
-a {
-  text-decoration: none; }
 
 .ribbon {
   float: right; }
