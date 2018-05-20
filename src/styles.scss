@@ -30,6 +30,27 @@ body {
     max-width: 960px;
     margin: 0 auto;
     font-family: $font-family;
+
+    .navbar {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: center;
+      height: 70px;
+      border-bottom: 1px solid $dark;
+      padding: 10px 0 10px 20px;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        margin-bottom: 5px;
+        margin-left: 20px;
+      }
+    }
   }
 }
 
@@ -39,4 +60,10 @@ body {
 
 h1, h2 {
   font-family: "Big John";
+}
+
+pre > code {
+  background-color: $background;
+  padding: 20px;
+  font-family: monospace;
 }

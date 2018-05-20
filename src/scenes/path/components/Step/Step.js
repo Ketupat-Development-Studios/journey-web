@@ -1,12 +1,16 @@
 import React, { PureComponent } from 'react'
+import qs from 'query-string'
 import Ionicon from 'react-ionicons'
 import ReactMarkdown from 'react-markdown'
 import { TimelineEvent } from 'react-event-timeline'
 import ApiManager from 'utils/ApiManager'
+import SelectField from 'components/fields/SelectField'
+import SecondaryButton from 'components/buttons/SecondaryButton/'
 import CommentsSection from 'components/comments/CommentsSection/'
 
 import './Step.css'
 
+const getRandomElement = myArray => myArray[Math.floor(Math.random() * myArray.length)]
 class Step extends PureComponent {
   constructor () {
     super()
@@ -25,11 +29,24 @@ class Step extends PureComponent {
     return (
       <div className="timeline-event" onClick={this.toggleTimelineEvent}>
         <TimelineEvent
-          title={step.title}
-          createdAt={step.date}
-          icon={(
-            <Ionicon name="ios-star" />
+          title={(
+            <div className="event-title">
+              <span>{step.title}</span>
+              <SelectField
+                className="fork"
+                placeholder="Fork this step"
+                options={[
+                  // { label: 'Learning Python Without Any Programming Experience', value: 'python' },
+                  { label: 'Learning Data Science', value: '3' }
+                  // { label: 'My Adventures in SCRUM', value: 'scrum' },
+                  // { label: 'Serverless Deployment', value: 'serverless' }
+                ]}
+                onChange={this.onFork}
+              />
+            </div>
           )}
+          createdAt={step.date}
+          icon={this.renderIcon()}
         >
           {
             activeEvent === id
@@ -71,6 +88,17 @@ class Step extends PureComponent {
     }
     this.setState({ comments: comments.reverse(), commentsLoading: false })
   }
+  renderIcon = () => {
+    const { step } = this.props
+    const { needHelp, isForked } = step
+    if (needHelp) {
+      return <Ionicon icon="ios-alert" color='#c0392b' />
+    }
+    if (isForked) {
+      return <Ionicon className="fork" icon="ios-git-merge" fontSize="20px" />
+    }
+    return null
+  }
   onNewCommentEdit = newComment => this.setState({ newComment })
   onNewCommentSubmit = async () => {
     const { step } = this.props
@@ -78,7 +106,7 @@ class Step extends PureComponent {
     const commentData = {
       stepId: step.id,
       content: newComment,
-      name: 'Ai Suan Yew'
+      name: getRandomElement(['Charles Tan', 'Wu Guanqun', 'Nicholas Lui', 'Sarah Lee', 'Joyce Er', 'Sim Er Ann'])
     }
     try {
       await ApiManager.createComment(commentData)
@@ -98,6 +126,18 @@ class Step extends PureComponent {
   }
   stopPropogation = event => {
     event.stopPropagation()
+  }
+  onFork = ({ value: pathId }) => {
+    const { step } = this.props
+    const curUrl = window.location.href
+    const urlParams = {
+      mde: `Forked from [${curUrl}](${curUrl})\n\n${step.content}`,
+      title: step.title,
+      params: JSON.stringify({
+        isForked: true
+      })
+    }
+    window.location.href = `/path/${pathId}/step/new?${qs.stringify(urlParams)}`
   }
 }
 

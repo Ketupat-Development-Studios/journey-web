@@ -16,8 +16,9 @@ import Results from './scenes/sample/Results'
 const AppRouter = () => (
   <Router>
     <div>
-      <div className="navbar">
-        <img src="" />
+      <div className="navbar" onClick={() => { window.location.href = '/' } }>
+        <img src="/journey.png" id="logo" />
+        <h1>Learning Journey</h1>
       </div>
       <Route exact path="/" component={Explore} />
       <Route path="/profile/:id" component={ProfileDetail} />
