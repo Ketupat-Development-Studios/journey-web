@@ -28,6 +28,49 @@
         "name": "Destin Poole",
         "profile_picture": "https://d3iw72m71ie81c.cloudfront.net/3fa3b0c2-df93-4962-a3d9-7cad201135b3-jpg"
       }
+    },
+    {
+      "id": 3,
+      "title": "Learning Data Science",
+      "summary": "I want to learn data science in half a year. Come follow my progress!",
+      "tags": [
+        "python",
+        "data science",
+        "kaggle"
+      ],
+      "author": {
+        "name": "Kenneth Wu",
+        "profile_picture": "https://somerley-80a0.kxcdn.com/wp-content/uploads/2016/04/img_ppl_12.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Learning Python without any Programming Experience",
+      "summary": "Follow me as I learn Python from scratch!",
+      "tags": [
+        "python",
+        "beginner",
+        "programming"
+      ],
+      "author": {
+        "name": "Stephanie Lim",
+        "profile_picture": "https://beyonsun.com/wp-content/uploads/2018/03/epicsiren01.jpg"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Visualising Data with Matplotlib",
+      "summary": "As an aspiring Data Scientist, Matplotlib is really crucial. Here's how I've learnt to use it!",
+      "tags": [
+        "data visualisation",
+        "data science",
+        "python",
+        "matplotlib"
+      ],
+      "author": {
+        "name": "Dennis Smith",
+        "profile_picture": "https://wtop.com/wp-content/uploads/2016/07/dennisfoley-300x300.jpg"
+      }
     }
   ],
   "steps": [
@@ -37,7 +80,8 @@
       "date": "20th May",
       "comments": [],
       "pathId": 1,
-      "id": 1
+      "id": 1,
+      "needHelp": true
     },
     {
       "title": "Sprint Planning",
@@ -45,15 +89,192 @@
       "date": "20th May",
       "comments": [],
       "pathId": 1,
-      "id": 2
+      "id": 2,
+      "isForked": true
     },
     {
       "title": "Quick Halftime Retrospective",
-      "content": "Usually the retrospective is only conducted after the entire sprint. But since this was our first sprint, we stumbled (and learnt!) a lot within the first week.\n\nWe held a quick 30 minutes _retro_ (fancy abbreviation for retrospective) on Friday, chaired by Scrum Master Justin.\n\n![retro](https://cdn-images-1.medium.com/max/1000/1*WlpszurME9pgIj_bjker-w.jpeg)",
+      "content": "Usually the retrospective is only conducted after the entire sprint. But since this was our first sprint, we stumbled (and learnt!) a lot within the first week.\n\nWe held a quick 30 minutes _retro_ (fancy abbreviation for retrospective) on Friday, chaired by Scrum Master Justin.\n\n```\nfor x in range y\n```\n\n![retro](https://cdn-images-1.medium.com/max/1000/1*WlpszurME9pgIj_bjker-w.jpeg)",
       "date": "20th May",
       "comments": [],
       "pathId": 1,
       "id": 3
+    },
+    {
+      "title": "Reading Up",
+      "content": "Python is an interpreted high-level programming language for general-purpose programming. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales.\n\nPython features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library.\n\nPython interpreters are available for many operating systems. CPython, the reference implementation of Python, is open source software and has a community-based development model, as do nearly all of its variant implementations. CPython is managed by the non-profit Python Software Foundation.",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 4,
+      "id": 4
+    },
+    {
+      "title": "Python Syntax",
+      "content": "",
+      "date": "21st May",
+      "comments": [],
+      "pathId": 4,
+      "id": 5
+    },
+    {
+      "title": "Strings and Console Output",
+      "content": "",
+      "date": "22nd May",
+      "comments": [],
+      "pathId": 4,
+      "id": 6
+    },
+    {
+      "title": "Conditionals and Control Flow",
+      "content": "Conditionals and Control Flow",
+      "date": "23rd May",
+      "comments": [],
+      "pathId": 4,
+      "id": 7
+    },
+    {
+      "title": "Functions",
+      "content": "Functions",
+      "date": "25th May",
+      "comments": [],
+      "pathId": 4,
+      "id": 8
+    },
+    {
+      "title": "Lists & Dictionaries",
+      "content": "Lists & Dictionaries",
+      "date": "27th May",
+      "comments": [],
+      "pathId": 4,
+      "id": 9
+    },
+    {
+      "title": "Lists and Functions",
+      "content": "Lists and Functions",
+      "date": "28th May",
+      "comments": [],
+      "pathId": 4,
+      "id": 10
+    },
+    {
+      "title": "Loops",
+      "content": "Loops",
+      "date": "29th May",
+      "comments": [],
+      "pathId": 4,
+      "id": 11
+    },
+    {
+      "title": "Bitwise Operators",
+      "content": "Bitwise Operators",
+      "date": "30th May",
+      "comments": [],
+      "pathId": 4,
+      "id": 12
+    },
+    {
+      "title": "Classes",
+      "content": "Classes",
+      "date": "1st June",
+      "comments": [],
+      "pathId": 4,
+      "id": 13
+    },
+    {
+      "title": "Reading Files (I/O)",
+      "content": "Reading Files (I/O)",
+      "date": "2nd June",
+      "comments": [],
+      "pathId": 4,
+      "id": 14
+    },
+    {
+      "title": "Capstone Project - Hangman Game",
+      "content": "The Goal: Despite the name, the actual “hangman” part isn’t necessary. \n\nThe main goal here is to create a sort of “guess the word” game. The user needs to be able to input letter guesses.\n\nA limit should also be set on how many guesses they can use.\n\nThis means you’ll need a way to grab a word to use for guessing. (This can be grabbed from a pre-made list. No need to get too fancy.)\n\nYou will also need functions to check if the user has actually inputted a single letter, to check if the inputted letter is in the hidden word (and if it is, how many times it appears), to print letters, and a counter variable to limit guesses.",
+      "date": "8th June",
+      "comments": [],
+      "pathId": 4,
+      "id": 15
+    },
+    {
+      "title": "Installing, Setting Up, etc.",
+      "content": "1. Install Python\n2. Install matplotlib (pip install)",
+      "date": "12th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 16
+    },
+    {
+      "title": "Importing Matplotlib",
+      "content": "Just as we use the np shorthand for NumPy and the pd shorthand for Pandas, we will use some standard shorthands for Matplotlib imports:\n\n> import matplotlib as mpl\n> import matplotlib.pyplot as plt\n\n\nThe plt interface is what we will use most often, as we shall see throughout this chapter.\n",
+      "date": "13th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 17
+    },
+    {
+      "title": "Line Plot",
+      "content": "Here’s how to create a line plot with text labels using plot().\n\n![](https://matplotlib.org/_images/sphx_glr_simple_plot_0011.png)",
+      "date": "13th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 18
+    },
+    {
+      "title": "Multiple subplots in one figure",
+      "content": "Multiple axes (i.e. subplots) are created with the subplot() function:\n\n![multisubplots](https://matplotlib.org/_images/sphx_glr_subplot_0011.png)",
+      "date": "13th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 19
+    },
+    {
+      "title": "Histograms",
+      "content": "The hist() function automatically generates histograms and returns the bin counts or probabilities:\n\n![](https://matplotlib.org/_images/sphx_glr_histogram_features_0011.png)",
+      "date": "14th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 20
+    },
+    {
+      "title": "Scatter Plots",
+      "content": "The scatter() function makes a scatter plot with (optional) size and color arguments. \n\nThis example plots changes in Google’s stock price, with marker sizes reflecting the trading volume and colors varying with time. Here, the alpha attribute is used to make semitransparent circle markers.\n\n![scatterPlotEg1](https://matplotlib.org/_images/sphx_glr_scatter_demo2_0011.png)\n\n**How to do it?**\n\n> matplotlib.pyplot.scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, hold=None, data=None, **kwargs)\n\nThis page will show you a bit more about it:\nhttps://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html\n",
+      "date": "14th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 21
+    },
+    {
+      "title": "Tables",
+      "content": "The table() function adds a text table to an axes.\n\n![](https://matplotlib.org/_images/sphx_glr_table_demo_0011.png)",
+      "date": "15th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 22
+    },
+    {
+      "title": "Date handling",
+      "content": "You can plot timeseries data with major and minor ticks and custom tick formatters for both.\n\n![](https://matplotlib.org/_images/sphx_glr_date_0011.png)",
+      "date": "16th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 23
+    },
+    {
+      "title": "Log Plots",
+      "content": "The semilogx(), semilogy() and loglog() functions simplify the creation of logarithmic plots.\n\n![](https://matplotlib.org/_images/sphx_glr_log_demo_0011.png)",
+      "date": "17th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 24
+    },
+    {
+      "title": "Subplot example",
+      "content": "Many plot types can be combined in one figure to create powerful and flexible representations of data.\n\n\n> import matplotlib.pyplot as plt\n import numpy as np\nnp.random.seed(19680801)\ndata = np.random.randn(2, 100)\n\n>fig, axs = plt.subplots(2, 2, figsize=(5, 5))\naxs[0, 0].hist(data[0])\naxs[1, 0].scatter(data[0], data[1])\naxs[0, 1].plot(data[0], data[1])\naxs[1, 1].hist2d(data[0], data[1])\n\n>plt.show()\n\n![](https://matplotlib.org/_images/sphx_glr_sample_plots_001.png)",
+      "date": "18th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 25
     }
   ],
   "comments": []

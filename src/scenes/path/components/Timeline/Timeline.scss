@@ -2,6 +2,9 @@
 
 .timeline {
   margin-bottom: 30px;
+  section {
+    font-weight: 400 !important;
+  }
   section>div:first-of-type {
     margin-left: 20px;
     background-color: $dark !important;

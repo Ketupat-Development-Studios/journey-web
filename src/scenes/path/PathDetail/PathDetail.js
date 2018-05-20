@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import qs from 'query-string'
 import ApiManager from 'utils/ApiManager'
 
 import Profile from 'scenes/path/components/Profile/'
@@ -38,6 +38,7 @@ class PathDetail extends Component {
           <PathInfo
             className="path-info"
             path={pathInfo}
+            onMerge={this.onMerge}
           />
         </div>
         <Timeline
@@ -57,6 +58,11 @@ class PathDetail extends Component {
       console.error(error)
     }
     this.setState({ path, isLoading: false })
+  }
+  onMerge = ({ value: pathId }) => {
+    const curUrl = window.location.href
+    const urlParams = { mde: `Merged from [${curUrl}](${curUrl})` }
+    window.location.href = `/path/${pathId}/step/new?${qs.stringify(urlParams)}`
   }
 }
 

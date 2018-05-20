@@ -11,12 +11,14 @@ import Explore from './scenes/explore/Explore'
 
 // HERE IS YOUR SAMPLE PATH
 import Sample from './scenes/sample/Sample'
+import Results from './scenes/sample/Results'
 
 const AppRouter = () => (
   <Router>
     <div>
-      <div className="navbar">
-        <img src="" />
+      <div className="navbar" onClick={() => { window.location.href = '/' } }>
+        <img src="/journey.png" id="logo" />
+        <h1>Learning Journey</h1>
       </div>
       <Route exact path="/" component={Explore} />
       <Route path="/profile/:id" component={ProfileDetail} />
@@ -25,6 +27,7 @@ const AppRouter = () => (
       <Route path="/step/:stepId/edit" component={StepEdit} />
 
       <Route path="/sample" component={Sample} />
+      <Route path="/results/:searchTerms" component={Results} />
     </div>
   </Router>
 )

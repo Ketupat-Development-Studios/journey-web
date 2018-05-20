@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import ReactMde from 'react-mde'
 import * as Showdown from 'showdown'
 import moment from 'moment'
+import qs from 'query-string'
 
 import ApiManager from 'utils/ApiManager'
 
@@ -12,14 +13,27 @@ import 'react-mde/lib/styles/css/react-mde-all.css'
 import './StepEdit.css'
 
 class StepEdit extends PureComponent {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       title: '',
-      mde: null,
-      isLoading: false
+      mde: { markdown: '' },
+      isLoading: false,
+      step: {}
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true})
+
+    const { location: { search } } = props
+    const queryString = qs.parse(search)
+    if (queryString.mde) {
+      this.state.mde.markdown = queryString.mde
+    }
+    if (queryString.title) {
+      this.state.title = queryString.title
+    }
+    if (queryString.params) {
+      this.state.params = JSON.parse(queryString.params)
+    }
   }
   componentDidMount () {
     const { match: { params: { stepId } } } = this.props
@@ -49,9 +63,14 @@ class StepEdit extends PureComponent {
           editorState={mde}
           generateMarkdownPreview={(markdown) => Promise.resolve(this.converter.makeHtml(markdown))}
         />
-        <PrimaryButton className="save-step" onClick={this.savePath}>
-          <span>SAVE</span>
-        </PrimaryButton>
+        <div className="action-bar">
+          <PrimaryButton className="save-step" onClick={this.savePath}>
+            <span>SAVE</span>
+          </PrimaryButton>
+          <PrimaryButton className="help" onClick={this.sosPath}>
+            <span>I NEED HELP</span>
+          </PrimaryButton>
+        </div>
       </div>
     )
   }
@@ -73,6 +92,7 @@ class StepEdit extends PureComponent {
       mde: {
         markdown: step.content
       },
+      step,
       pathId: step.pathId,
       isLoading: false
     })
@@ -97,12 +117,14 @@ class StepEdit extends PureComponent {
     } else {
       // create
       const { match: { params: { pathId } } } = this.props
+      const { params } = this.state
       const stepData = {
         title,
         content: mde.markdown,
         date: moment().format('Do MMM'),
         comments: [],
-        pathId: Number.parseInt(pathId, 10)
+        pathId: Number.parseInt(pathId, 10),
+        ...params
       }
       try {
         await ApiManager.createStep(stepData)
@@ -111,6 +133,20 @@ class StepEdit extends PureComponent {
       }
       window.location.href = `/path/${pathId}`
     }
+  }
+  sosPath = async () => {
+    const { match: { params: { stepId } } } = this.props
+    const { pathId, step } = this.state
+    try {
+      const stepData = {
+        id: stepId,
+        needHelp: !step.needHelp
+      }
+      await ApiManager.updateStep(stepData)
+    } catch (error) {
+      console.error(error)
+    }
+    window.location.href = `/path/${pathId}`
   }
 }
 
