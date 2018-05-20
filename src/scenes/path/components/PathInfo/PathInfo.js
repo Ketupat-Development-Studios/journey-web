@@ -18,7 +18,7 @@ class PathInfo extends PureComponent {
     }
   }
   render () {
-    const { className, path } = this.props
+    const { className, path, onMerge } = this.props
     return (
       <div className={classnames('path-info', className)}>
         <h1 className="path-title">{path.title}</h1>
@@ -31,9 +31,10 @@ class PathInfo extends PureComponent {
           <SelectField
             className="merge"
             placeholder="Merge with other path"
+            onChange={onMerge}
             options={[
               // { label: 'Learning Python Without Any Programming Experience', value: 'python' },
-              { label: 'Visualising Data with Matplotlib', value: 'matplotlib' },
+              { label: 'Learning Data Science', value: '3' }
               // { label: 'My Adventures in SCRUM', value: 'scrum' },
               // { label: 'Serverless Deployment', value: 'serverless' }
             ]}

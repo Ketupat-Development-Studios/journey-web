@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import qs from 'query-string'
 import Ionicon from 'react-ionicons'
 import ReactMarkdown from 'react-markdown'
 import { TimelineEvent } from 'react-event-timeline'
@@ -36,10 +37,11 @@ class Step extends PureComponent {
                 placeholder="Fork this step"
                 options={[
                   // { label: 'Learning Python Without Any Programming Experience', value: 'python' },
-                  { label: 'Visualising Data with Matplotlib', value: 'matplotlib' },
+                  { label: 'Learning Data Science', value: '3' }
                   // { label: 'My Adventures in SCRUM', value: 'scrum' },
                   // { label: 'Serverless Deployment', value: 'serverless' }
                 ]}
+                onChange={this.onFork}
               />
             </div>
           )}
@@ -124,6 +126,12 @@ class Step extends PureComponent {
   }
   stopPropogation = event => {
     event.stopPropagation()
+  }
+  onFork = ({ value: pathId }) => {
+    const { step } = this.props
+    const curUrl = window.location.href
+    const urlParams = { mde: `Forked from [${curUrl}](${curUrl})\n\n${step.content}`, title: step.title }
+    window.location.href = `/path/${pathId}/step/new?${qs.stringify(urlParams)}`
   }
 }
 

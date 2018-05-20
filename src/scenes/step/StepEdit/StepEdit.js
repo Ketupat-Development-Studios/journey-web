@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import ReactMde from 'react-mde'
 import * as Showdown from 'showdown'
 import moment from 'moment'
+import qs from 'query-string'
 
 import ApiManager from 'utils/ApiManager'
 
@@ -12,8 +13,8 @@ import 'react-mde/lib/styles/css/react-mde-all.css'
 import './StepEdit.css'
 
 class StepEdit extends PureComponent {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       title: '',
       mde: { markdown: '' },
@@ -21,6 +22,15 @@ class StepEdit extends PureComponent {
       step: {}
     }
     this.converter = new Showdown.Converter({tables: true, simplifiedAutoLink: true})
+
+    const { location: { search } } = props
+    const queryString = qs.parse(search)
+    if (queryString.mde) {
+      this.state.mde.markdown = queryString.mde
+    }
+    if (queryString.title) {
+      this.state.title = queryString.title
+    }
   }
   componentDidMount () {
     const { match: { params: { stepId } } } = this.props
