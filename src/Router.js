@@ -20,13 +20,13 @@ const AppRouter = () => (
         <img src="/journey.png" id="logo" />
         <h1>Learning Journey</h1>
       </div>
-      <Route exact path="/" component={Explore} />
+      <Route exact path="/explore" component={Explore} />
       <Route path="/profile/:id" component={ProfileDetail} />
       <Route exact path="/path/:pathId" component={PathDetail} />
       <Route path="/path/:pathId/step/new" component={StepEdit} />
       <Route path="/step/:stepId/edit" component={StepEdit} />
 
-      <Route path="/sample" component={Sample} />
+      <Route exact path="/" component={Sample} />
       <Route path="/results/:searchTerms" component={Results} />
     </div>
   </Router>

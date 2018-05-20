@@ -1,48 +1,19 @@
 @import "src/styles.scss";
 
-* {
-  color: #3C2520;
-  font-family: 'Helvetica, "Open Sans"'; }
-
-html {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-body {
-  background-color: #fffcf2; 
-    margin: 0 !important;
-    padding: 0 !important;
-
-}
-  body #root {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: 'Helvetica, "Open Sans"';
-    width: 100% !important;
-}
-
-::-webkit-scrollbar {
-  display: none; }
-
-h1, h2 {
-  font-family: "Big John"; }
-
 .scene-sample {
   color: #3C2520; 
 }
 .wrapper {
-  display: flex;
   position: fixed;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
   z-index: 999;
   top:-25px;
-  height: 100%;
+  left: 0;
+  height: 110%;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-y: scroll;
+  background-color:$background;
 }
 .header {
   height: 600px;
@@ -66,8 +37,8 @@ h1, h2 {
 }
 .searchBar {
   width: 80%;
-  height: 5vh;
-  font-size: 2vh;
+  height: 50px;
+  font-size: 1em;
 }
 .container {
     display: flex;
@@ -89,12 +60,12 @@ h1, h2 {
 
 .resultsProto {
     width: 460px;
-    height: 690px;
-      background-position: center;
+    height: 45vw;
+      background-position: top center;
       background-repeat: no-repeat;
       /*background-size: cover;*/
-      background-size: cover;
     margin: 0px 50px;
+    background-size: 100% auto;
 }
 
 .results1{

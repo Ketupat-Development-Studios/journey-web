@@ -106,7 +106,8 @@
       "date": "20th May",
       "comments": [],
       "pathId": 4,
-      "id": 4
+      "id": 4,
+      "needHelp": false
     },
     {
       "title": "Python Syntax",

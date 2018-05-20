@@ -1,20 +1,8 @@
-* {
-  color: #3C2520;
-  font-family: Helvetica, "Open Sans"; }
+@import "src/styles.scss";
 
-body {
-  background-color: #fff0dd; }
-
-body #root {
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: Helvetica, "Open Sans"; }
-
-::-webkit-scrollbar {
-  display: none; }
-
-h1, h2 {
-  font-family: "Big John"; }
+#searchform {
+  padding: 20px 0 20px 0;
+}
 
 .scene-sample {
   color: #3C2520; }
