@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import ReactDOM from 'react-dom'
 import { Timeline as EventTimeline } from 'react-event-timeline'
 import PrimaryButton from 'components/buttons/PrimaryButton/'
 import Step from '../Step/'
@@ -31,6 +32,7 @@ class Timeline extends PureComponent {
     const { activeEvent } = this.state
     return (
       <Step
+        ref={(component) => { this[`step${index}`] = component }}
         key={event.id}
         id={index}
         step={event}
@@ -44,7 +46,8 @@ class Timeline extends PureComponent {
     if (activeEvent === index) {
       this.setState({ activeEvent: null })
     } else {
-      this.setState({ activeEvent: index })
+      const element = ReactDOM.findDOMNode(this[`step${index}`])
+      this.setState({ activeEvent: index }, () => window.scrollTo(0, element.offsetTop + 200))
     }
   }
   newStep = () => {
