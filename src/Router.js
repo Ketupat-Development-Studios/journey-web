@@ -11,6 +11,7 @@ import Explore from './scenes/explore/Explore'
 
 // HERE IS YOUR SAMPLE PATH
 import Sample from './scenes/sample/Sample'
+import Results from './scenes/sample/Results'
 
 const AppRouter = () => (
   <Router>
@@ -25,7 +26,7 @@ const AppRouter = () => (
       <Route path="/step/:stepId/edit" component={StepEdit} />
 
       <Route path="/sample" component={Sample} />
-      <Route path="/results/:searchTerms" component={results} />
+      <Route path="/results/:searchTerms" component={Results} />
     </div>
   </Router>
 )
