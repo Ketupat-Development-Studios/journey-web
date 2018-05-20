@@ -40,3 +40,9 @@ body {
 h1, h2 {
   font-family: "Big John";
 }
+
+pre > code {
+  background-color: $background;
+  padding: 20px;
+  font-family: monospace;
+}

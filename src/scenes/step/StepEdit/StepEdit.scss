@@ -1,8 +1,29 @@
+@import "src/styles.scss";
+
 .scene-path-edit {
+  padding-bottom: 40px;
+  .title-input{
+    width: 100%;
+  }
   .path-editor {
     background-color: #ffffff;
   }
-  .save-step {
+  .action-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 20px;
+
+    .save-step {
+    }
+
+    .help {
+      background-color: $red;
+    }
+
+    .help:hover {
+      background-color: darken($red, 10%);
+    }
+    
   }
 }

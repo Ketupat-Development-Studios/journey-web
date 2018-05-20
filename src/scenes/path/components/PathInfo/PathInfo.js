@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import classnames from 'classnames'
+import SelectField from 'components/fields/SelectField'
 import Tag from '../Tag/'
 import LikeButton from '../LikeButton/'
 
@@ -27,6 +28,16 @@ class PathInfo extends PureComponent {
             { path.tags.map(tag => (<Tag tag={tag} key={tag} />)) }
           </div>
           <LikeButton className="like-button" />
+          <SelectField
+            className="merge"
+            placeholder="Merge with other path"
+            options={[
+              // { label: 'Learning Python Without Any Programming Experience', value: 'python' },
+              { label: 'Visualising Data with Matplotlib', value: 'matplotlib' },
+              // { label: 'My Adventures in SCRUM', value: 'scrum' },
+              // { label: 'Serverless Deployment', value: 'serverless' }
+            ]}
+          />
         </div>
       </div>
     )
