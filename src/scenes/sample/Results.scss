@@ -1,0 +1,62 @@
+* {
+  color: #3C2520;
+  font-family: Helvetica, "Open Sans"; }
+
+body {
+  background-color: #fff0dd; }
+
+body #root {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Helvetica, "Open Sans"; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+h1, h2 {
+  font-family: "Big John"; }
+
+.scene-sample {
+  color: #3C2520; }
+
+.search-card {
+  background-color: #fff;
+  box-sizing: border-box;
+  align-content: center;
+  line-height: 1.6;
+  padding: 1.5em 2em;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px; }
+
+.card-container {
+  background-color: #fffcf2;
+  padding: 1.5em 2em; }
+
+.card-container:hover {
+  background-color: #fff6d9; }
+
+.corner-ribbon {
+  width: 100px;
+  background: #e43;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  overflow: hidden; }
+
+a {
+  text-decoration: none; }
+
+.ribbon {
+  float: right; }
+
+.bar {
+    width: 100%;
+}
