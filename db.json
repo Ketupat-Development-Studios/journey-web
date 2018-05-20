@@ -1,0 +1,339 @@
+{
+  "paths": [
+    {
+      "id": 1,
+      "title": "Learning To Bake Sourdough Bread",
+      "summary": "My first attempt at creating a sourdough starter, then adding flour and baking it. One failed attempt at letting the bread rise, but I succeeded in the end.",
+      "picture": "https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-I_uPEYSGiZo%2FTZqC4Hkj4wI%2FAAAAAAAACiw%2Fl3Tbp1EwWro%2Fs1600%2FDSCF6728.JPG&f=1",
+      "tags": [
+        "Baking",
+        "Bread",
+        "Sourdough"
+      ],
+      "author": {
+        "name": "Kevin Cheng",
+        "profile_picture": "https://pbs.twimg.com/profile_images/994722216741781504/3JaM54xk_400x400.jpg"
+      },
+      "prereqs": [
+        "Able to use oven"
+      ],
+      "materials": [
+        "Oven",
+        "Plastic bowl",
+        "Instant mashed potato flakes",
+        "White sugar",
+        "Warm water",
+        "Active dry yeast",
+        "Salt",
+        "Vegetable oil",
+        "Flour",
+        "Butter"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Learning To Make Pandan Cake",
+      "summary": "Trying out my mom's recipe for Pandan Cake.",
+      "picture": "https://1.bp.blogspot.com/-FRB7hNz8GbE/UIZXHfJZIJI/AAAAAAAAAOE/KXChTTAXmco/s1600/Pandan+Chiffon+Cake+@+250412+(1).JPG",
+      "tags": [
+        "Pandan",
+        "Baking",
+        "Cake"
+      ],
+      "author": {
+        "name": "Guan Chuan",
+        "profile_picture": ""
+      },
+      "prereqs": [],
+      "materials": [],
+      "steps": []
+    },
+    {
+      "id": 3,
+      "title": "My First Attempt At Croissants",
+      "summary": "Making croissants, the perfect gift to bring to the office.",
+      "picture": "https://i.imgur.com/vvXv4hx.jpg",
+      "tags": [
+        "Croissants",
+        "Baking"
+      ],
+      "author": {
+        "name": "Guan Chuan",
+        "profile_picture": "https://randomuser.me/api/portraits/men/92.jpg"
+      },
+      "prereqs": [],
+      "materials": []
+    },
+    {
+      "id": 4,
+      "title": "Baking Halloween Cookies",
+      "summary": "Cute snacks for the holiday.",
+      "picture": "https://i.redd.it/35u921rlk6wz.jpg",
+      "tags": [
+        "Baking",
+        "Cookies",
+        "Halloween"
+      ],
+      "author": {
+        "name": "Guan Chuan",
+        "profile_picture": "https://randomuser.me/api/portraits/men/67.jpg"
+      },
+      "prereqs": [],
+      "materials": []
+    },
+    {
+      "id": 5,
+      "title": "Learning Data Science",
+      "summary": "I want to learn data science in half a year. Come follow my progress!",
+      "tags": [
+        "python",
+        "data science",
+        "kaggle"
+      ],
+      "author": {
+        "name": "Guan Chuan",
+        "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/800px-Donald_Trump_official_portrait.jpg"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "pathId": 1,
+      "title": "Prepare the Starter",
+      "content": "The first step is to prepare sourdough starter. I poured 3 tbsp. of mashed potato flakes, 3 tbsp. of sugar, 1 cup of water, and 2 1/4 tbsp. of yeast into a plastic cup and covered it in cling wrap. I plan to let the container sit on the counter for 5 days and stirred it for 5 minutes everyday.\n\n![img](https://1.bp.blogspot.com/-TIz-GJjDFGI/TZqFpVYN8RI/AAAAAAAACi4/OHMszJqz1S8/s1600/images+%25282%2529.jpg)",
+      "date": "5th May"
+    },
+    {
+      "id": 2,
+      "pathId": 1,
+      "title": "Continue Feeding the Starter",
+      "content": "I fed my sourdough starter with another 3 tbsp. of potato flakes, 3/4 tbsp. of sugar, and 1 cup of water.\n\nIMPORTANT! Over the past few days I did some more reading and learned that I have to avoid letting my starter come into contact with metal as much as possible. Sourdough bread is acidic, if I let my starter come into contact with metals there'll be a chemical reaction and my yeast will die.",
+      "date": "9th May"
+    },
+    {
+      "id": 3,
+      "pathId": 1,
+      "title": "Take Some of Starter for Baking",
+      "content": "At night I removed 1 cup of my sourdough starter to use for baking my sourdough bread.\n\nI plan to rinse and repeat this process to continue baking sourdough bread with my starter.",
+      "date": "9th May"
+    },
+    {
+      "id": 4,
+      "pathId": 1,
+      "title": "Add the Flour",
+      "content": "Today I finally attempted to bake the bread itself. I mixed 1 cup of my starter with 1 1/2 cups of warm water, 1 1/2 tbsp. of salt, 1/2 cup of sugar, and 1/2 cup of vegetable oil in a large bowl. Afterwards I added 6 cups of flour and mixed it in. Then I lightly covered the dough in oil, covered it and left it to rise overnight.\n\nI observed it after two hours and it seemed to be rising pretty well!\n\n![img](https://sweetcayenne.com/wp-content/uploads/2016/05/sourdough-rising.jpg)",
+      "date": "10th May"
+    },
+    {
+      "id": 5,
+      "pathId": 1,
+      "title": "Try Again (oops)",
+      "content": "Disaster! Today I woke up and checked on my bread the first thing in the morning. Unfortunately it completely collapsed. I consulted a sourdough forum online and found [a relevant thread](https://sourdough.com/forum/collapsed-dough). Apparently, letting it rise overnight is way too long at room temperature. So tonight when I tried again with another cup of starter, I let my sourdough rise in the refrigerator.",
+      "date": "11th May"
+    },
+    {
+      "id": 6,
+      "pathId": 1,
+      "title": "Bake the Bread",
+      "content": "Today I checked on my sourdough first thing in the morning again and it was looking good. So I proceeded to knead the dough for a few minutes. At first the dough stuck to my fingers while kneading, so I tried sprinkling some flour over my hands and it helped keep the dough smooth. Then I divided the dough into two pans.\n\nI preheated the oven to over 350 degrees then placed the 2 pans of dough inside. I let it bake for 45 minutes until the bread became a nice light golden brown. And success!\n\n![img](https://3.bp.blogspot.com/-eHuBK0FISEA/TZqC3KT745I/AAAAAAAACik/6qj8mKNbztA/s1600/DSCF6688.JPG)",
+      "date": "12th May"
+    },
+    {
+      "id": 7,
+      "pathId": 1,
+      "title": "Success!",
+      "content": "This was my first time baking sourdough, and I think it turned out pretty well. There were some lucky breaks like when I used a plastic container instead of a metal one, but I also had to retry the process when my sourdough collapsed overnight. All in all though, a good experience.\n\nhttps://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-I_uPEYSGiZo%2FTZqC4Hkj4wI%2FAAAAAAAACiw%2Fl3Tbp1EwWro%2Fs1600%2FDSCF6728.JPG&f=1",
+      "date": "12th May"
+    },
+    {
+      "id": 8,
+      "pathId": 5,
+      "title": "Learn python",
+      "content": "## Learn python\nLearnt python from Abigail's [awesome path](/paths/12)\n![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png \"Abigail's path\")\n\ntest new edit",
+      "date": "7 August 2017"
+    },
+    {
+      "id": 9,
+      "pathId": 5,
+      "title": "Online research into data science",
+      "content": "### Useful articles:\n- [Wikipedia on Data Science](https://en.wikipedia.org/wiki/Data_science)\n- [Michael Hochster's response on Quora](https://www.quora.com/What-is-data-science)\n- [Coursera Crash Course](https://www.coursera.org/learn/data-science-course/lecture/X4Z9T/what-is-data-science)\n\n### Summary:\nI learnt that data science is about **analysis** and **prediction** on data.\nAnd that a lot of curated datasets is freely available online to practice on!",
+      "date": "15 October 2017"
+    },
+    {
+      "id": 10,
+      "pathId": 5,
+      "title": "Plotting scatterplot with pyturtle",
+      "content": "Turned out to be a bad idea. 1/10 would not recommend. Apparently [matplotlib](https://google.com) is a better tool to plot data. Guess I'll have to learn that first...",
+      "date": "21 October 2017"
+    },
+    {
+      "id": 11,
+      "pathId": 5,
+      "title": "Data analysis",
+      "content": "Thanks to Guan Lim's helpful [comment](), I have decided to learn matplotlib and numpy. I found this [tutorial from Gary Newman]() to be immensely helpful.\n\nHere are the beautiful graphs I've plotted from the [housing prices dataset from UCLA]().\n![](http://bigdata-madesimple.com/wp-content/uploads/2016/04/Relationship-between-RM-and-Price.png)",
+      "date": "31 October 2017"
+    },
+    {
+      "id": 12,
+      "pathId": 5,
+      "title": "Regression ??",
+      "content": "Armed with matplotlib and numpy, I wanted to start analysing data.\nThe simplest analysis method according to [this blog post]() is linear regression.\nBut I have no idea what is linear regression.\nTime for some math remedial...",
+      "date": "3 November 2017"
+    },
+    {
+      "id": 13,
+      "pathId": 5,
+      "title": "Statistics primer",
+      "content": "Thank god for Guan Tan and his detailed path \"Statistics primer for data science\"!",
+      "date": "3 November 2017"
+    },
+    {
+      "id": 14,
+      "pathId": 5,
+      "title": "Participate in Kaggle Competition",
+      "content": "I found this great website [Kaggle]() to practice my newfound data science skills on. I placed 103rd out of 120, but it was a good way to cement my understanding in data science and to learn from the pros out there. This marks the end of this phase of my data science journey. For those who had followed me thus far, do share your capstone projects in the comments here as well!",
+      "date": "18 December 2017"
+    },
+    {
+      "title": "Woah woah woah new step",
+      "content": "What ana amzing step",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 1,
+      "id": 15
+    },
+    {
+      "title": "New Step!!",
+      "content": "# Wow a header\n\nthis is great",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 1,
+      "id": 16
+    },
+    {
+      "title": "Very new step",
+      "content": "So cool",
+      "date": "20th May",
+      "comments": [],
+      "pathId": 5,
+      "id": 17
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "stepId": 14,
+      "content": "Check out my [github project]() on housing prices in Manhatten!",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 2,
+      "stepId": 14,
+      "content": "Hey I managed to predict the prices of bitcoin tomorrow based on weather statistics from the last 10 years! Guess it's really as volatile as the weather here!",
+      "name": "Guan Guan"
+    },
+    {
+      "id": 3,
+      "stepId": 13,
+      "content": "Glad you found it useful",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 4,
+      "stepId": 12,
+      "content": "You can try [my path on math for data science]()!",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 5,
+      "stepId": 10,
+      "content": "Wow that happened to me too! Thanks for saving my time",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 6,
+      "stepId": 10,
+      "content": "You can look into [numpy](https://google.com) to manipulate your data",
+      "name": "Guan Lim"
+    },
+    {
+      "id": 7,
+      "stepId": 9,
+      "content": "Interesting quora response!",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 8,
+      "stepId": 9,
+      "content": "Is science data or is data science?",
+      "name": "Guan Guan"
+    },
+    {
+      "id": 9,
+      "stepId": 8,
+      "content": "Very helpful project!",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 10,
+      "stepId": 7,
+      "content": "Looks good!",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 11,
+      "stepId": 6,
+      "content": "I'm going to try this out, follow me to find out how it goes!",
+      "name": "Guan Lim"
+    },
+    {
+      "id": 12,
+      "stepId": 5,
+      "content": "Leaving my bread to rise overnight always worked for me. Maybe it depends on the starter you use.",
+      "name": "Wagner Wag"
+    },
+    {
+      "id": 13,
+      "stepId": 4,
+      "content": "Sounds good so far!",
+      "name": "Tamy Tam"
+    },
+    {
+      "id": 14,
+      "stepId": 3,
+      "content": "How long can you keep using your starter like this?",
+      "name": "Ham Solo"
+    },
+    {
+      "id": 15,
+      "stepId": 3,
+      "content": "Indefinitely",
+      "name": "Bong Gong"
+    },
+    {
+      "id": 16,
+      "stepId": 2,
+      "content": "I never knew that about metal bowls, thanks for the warning!",
+      "name": "Mark Tan"
+    },
+    {
+      "id": 17,
+      "stepId": 1,
+      "content": "Thanks for teaching how to create a starter, that's what I never figured out!",
+      "name": "Guan Tan"
+    },
+    {
+      "id": 18,
+      "stepId": 1,
+      "content": "This is really helpful",
+      "name": "Guan Lim"
+    },
+    {
+      "id": 19,
+      "stepId": 1,
+      "content": "Thanks for making this",
+      "name": "Guan Khoo"
+    }
+  ]
+}
